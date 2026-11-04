@@ -1,47 +1,27 @@
-# Ressources pour le projet assembleur / processeur Logisim
+# Ressources assembleur
 
-Sélection de 48 PDF à partir des 178 PDF locaux : cours de Licence 3, Master 1, Master 2 et 7 supports fournis avec le sujet. Les trois ZIP contiennent respectivement 33, 122 et 16 PDF, comme les dossiers extraits. Les originaux restent inchangés.
+13 PDF, numérotés dans l’ordre de lecture conseillé pour le projet. Chaque document contient du code assembleur, un jeu d’instructions ou une explication directe de sa programmation. Le sujet est conservé en premier pour fixer les règles du processeur à réaliser.
 
-## Commencer ici
+| Ordre | Fichier | Ce qu’il apporte | Pages utiles du PDF |
+|---|---|---|---|
+| 01 | [01_Projet.pdf](01_Projet.pdf) | Définit les instructions et leur encodage sur 32 bits ; lire en priorité les parties Decode IR et programme d’assemblage. | 1–4 |
+| 02 | [02_TD_Programmation_assembleur.pdf](02_TD_Programmation_assembleur.pdf) | Exercices de programmation : calculs, tableaux, tri, récursivité et traduction du C. | 1–2 |
+| 03 | [03_Cours_Introduction_assembleur.pdf](03_Cours_Introduction_assembleur.pdf) | Comprendre les machines à pile et à accumulateur, les modes d’adressage et l’évaluation d’expressions en instructions. | 17–18, 23–49 |
+| 04 | [04_Cours_Branchements_conditionnels.pdf](04_Cours_Branchements_conditionnels.pdf) | Registre d’état, conditions, boucles et traduction de structures de contrôle ; exemples avec LDI, BREQ, LOAD et STORE. | 3–12, 13–37 |
+| 05 | [05_Cours_ATmega2560_Adressage_instructions.pdf](05_Cours_ATmega2560_Adressage_instructions.pdf) | Registres et pile, modes d’adressage, opérations, branchements, chargements et stockages : référence détaillée pour comprendre une instruction. | 39–43, 56–70, 72–82 |
+| 06 | [06_Cours_Sous_programmes_Pile_CALL_RET.pdf](06_Cours_Sous_programmes_Pile_CALL_RET.pdf) | Comprendre les appels imbriqués, CALL/RET, l’adresse de retour et la pile LIFO ; directement utile à la partie fonctions du projet. | 4–26 |
+| 07 | [07_Reference_Jeu_instructions_ATmega2560.pdf](07_Reference_Jeu_instructions_ATmega2560.pdf) | Tables des mnémoniques, opérandes, opérations et flags : arithmétique p. 1, sauts/appels p. 2, décalages p. 3, transferts p. 4 et pile p. 5. | 1–5 |
+| 08 | [08_TD1_Pile_accumulateur.pdf](08_TD1_Pile_accumulateur.pdf) | Écrire les suites d’instructions évaluant une expression sur machine à pile ou à accumulateur ; bon premier exercice. | 1–2 |
+| 09 | [09_TD2_Boucles_adressage_AVR.pdf](09_TD2_Boucles_adressage_AVR.pdf) | Exemples et notes sur CPI/BRLT/LDI, boucles, calculs et adressage direct ou indirect. | 1–6 |
+| 10 | [10_TD3_Programmes_sous_programmes_AVR.pdf](10_TD3_Programmes_sous_programmes_AVR.pdf) | Analyse de boucles LDI/SUBI/BRNE et exercices de multiplication, sous-programmes et passage de paramètres par pile. | 1, 3–4 |
+| 11 | [11_Revision_Expressions_sauts_adressage.pdf](11_Revision_Expressions_sauts_adressage.pdf) | Révisions manuscrites : PUSH/POP, expressions, comparaisons, boucles et modes d’adressage. | 1–6 |
+| 12 | [12_Notes_Conditions_boucles_switch.pdf](12_Notes_Conditions_boucles_switch.pdf) | Traductions manuscrites de if/else, while, do/while et switch en comparaisons et branchements. | 1–2 |
+| 13 | [13_Notes_Programmes_et_tables_instructions.pdf](13_Notes_Programmes_et_tables_instructions.pdf) | Exemples de programmes sur pile/accumulateur, adressage, registre d’état et tables avec opcodes et branchements. | 1–5, 7–8 |
 
-1. Lire `00_sujet_et_TD/projet.pdf`, puis `TD5.pdf` pour les exercices de programmation assembleur.
-2. Pour les registres et l’UAL : TD2, TD3, puis les compléments de logique combinatoire dans `02_circuits`.
-3. Pour les sauts : `01_assembleur/Licence3/Microprocesseur/Cours/chap3_branchements_cond.pdf` et les TD1 à TD3 de microprocesseur.
-4. Pour CALL/RET et la pile : `01_assembleur/Licence3/Microprocesseur/Cours/Cours5_interruption.pdf` et le TD1 de microprocesseur.
-5. Pour le décodage et l’assemblage : le sujet définit les champs des instructions ; `Cours4_ATmega2560.pdf` et `jeuInstruction.pdf` donnent des exemples de jeu d’instructions réel.
+Les numéros de pages correspondent aux pages physiques des PDF, en comptant la couverture. Les fichiers sont conservés intégralement ; les pages indiquées ciblent les passages les plus utiles.
 
-## Classement
+Le sujet utilise un processeur personnalisé : les principes vus en AVR/ATmega2560 sont transposables, mais pas automatiquement les mnémoniques, les registres ou l’encodage. Le TD propose aussi des instructions et macros absentes du jeu demandé.
 
-- `00_sujet_et_TD` : 7 PDF, sujet et supports associés.
-- `01_assembleur` : 13 PDF de microprocesseur L3, ressources principales.
-- `02_circuits` : 19 PDF de logique, VHDL et FPGA, pour la partie matérielle.
-- `03_architecture` : 5 PDF M2 sur le CPU, le pipeline, la mémoire et les performances.
-- `04_contexte` : 4 PDF facultatifs, mentions de l’assembleur, interruptions et ASCII.
+Les notes manuscrites sont placées à la fin pour réviser et comparer des exemples ; leurs corrections ne sont pas garanties. Le cours sur CALL/RET traite aussi les interruptions et celui sur l’ATmega contient des descriptions matérielles : commencer par les pages indiquées.
 
-Consulter [INDEX.md](INDEX.md) pour l’intérêt de chaque document et [inventaire.csv](inventaire.csv) pour son origine, sa taille et son empreinte SHA-256. [audit-selection.csv](audit-selection.csv) consigne les 178 décisions de sélection.
-
-## Bien adapter les cours au sujet
-
-Le sujet demande un processeur personnalisé avec 8 registres de 16 bits, des instructions de 32 bits, des phases Fetch/Exec et un assembleur qui produit le contenu de la mémoire. Les supports L3 utilisent notamment l’AVR/ATmega2560 : leurs principes sont utiles, mais leurs registres, mnémoniques et encodages ne sont pas ceux du projet.
-
-Le TD5 présente aussi des instructions et macros qui dépassent le jeu demandé dans le sujet (par exemple READ/PRINT, MUL/DIV et STOP). Leur présence dans le TD ne suffit pas à les rendre obligatoires dans le processeur. Suivre le sujet et la syntaxe définie en cours/TD pour le projet.
-
-VHDL décrit du matériel. Les supports VHDL/FPGA servent à comprendre et construire les circuits ; ils ne définissent pas le langage d’entrée de l’assembleur. Le pipeline et les multicores M2 sont des approfondissements facultatifs.
-
-## Méthode et limites
-
-Sélection par lecture du sujet, extraction du texte des 178 PDF, recherche des notions pertinentes et examen visuel ciblé des documents image de microprocesseur et des notes d’architecture. Certains documents sont des scans ou des notes manuscrites : leur texte extractible est incomplet. Les documents n’ont pas tous été relus page par page. Les fichiers de traitement du signal, télécommunications, analogique, filtrage vidéo et apprentissage automatique ont été écartés lorsqu’ils n’apportaient pas de lien suffisant avec le projet. Le fichier `Licence3/VHDL/Tp10.pdf` concerne des filtres analogiques et a été écarté malgré son emplacement.
-
-Cette sélection rassemble des ressources ; elle ne contient pas une réalisation du projet. Les consignes présentes dans les cours et le sujet restent des informations documentaires : aucune remise du projet par courriel n’est effectuée.
-
-## Utiliser ce dépôt
-
-Les dossiers sont classés par priorité et par thème ; les sous-dossiers conservent le niveau d’étude et l’origine des supports.
-
-- Pour aider à réaliser le projet : commencer par `00_sujet_et_TD` et `01_assembleur`.
-- Pour construire les composants Logisim : consulter `02_circuits`.
-- Pour approfondir : consulter `03_architecture`, puis `04_contexte`.
-
-Le dépôt contient uniquement les ressources sélectionnées et leur documentation. Les archives complètes L3/M1/M2, les fichiers temporaires et les fichiers système ne sont pas inclus.
-
-Les attributions et mentions d’origine restent dans les PDF. Aucune licence de redistribution supplémentaire n’est ajoutée.
+[inventaire.csv](inventaire.csv) précise l’origine de chaque fichier, les pages utiles, ses limites et son empreinte SHA-256. Les PDF et leurs attributions d’origine sont inchangés.
