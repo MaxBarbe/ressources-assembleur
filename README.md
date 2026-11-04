@@ -17,11 +17,3 @@
 | 11 | [11_Revision_Expressions_sauts_adressage.pdf](11_Revision_Expressions_sauts_adressage.pdf) | Révisions manuscrites : PUSH/POP, expressions, comparaisons, boucles et modes d’adressage. | 1–6 |
 | 12 | [12_Notes_Conditions_boucles_switch.pdf](12_Notes_Conditions_boucles_switch.pdf) | Traductions manuscrites de if/else, while, do/while et switch en comparaisons et branchements. | 1–2 |
 | 13 | [13_Notes_Programmes_et_tables_instructions.pdf](13_Notes_Programmes_et_tables_instructions.pdf) | Exemples de programmes sur pile/accumulateur, adressage, registre d’état et tables avec opcodes et branchements. | 1–5, 7–8 |
-
-Les numéros de pages correspondent aux pages physiques des PDF, en comptant la couverture. Les fichiers sont conservés intégralement ; les pages indiquées ciblent les passages les plus utiles.
-
-Le sujet utilise un processeur personnalisé : les principes vus en AVR/ATmega2560 sont transposables, mais pas automatiquement les mnémoniques, les registres ou l’encodage. Le TD propose aussi des instructions et macros absentes du jeu demandé.
-
-Les notes manuscrites sont placées à la fin pour réviser et comparer des exemples ; leurs corrections ne sont pas garanties. Le cours sur CALL/RET traite aussi les interruptions et celui sur l’ATmega contient des descriptions matérielles : commencer par les pages indiquées.
-
-[inventaire.csv](inventaire.csv) précise l’origine de chaque fichier, les pages utiles, ses limites et son empreinte SHA-256. Les PDF et leurs attributions d’origine sont inchangés.
